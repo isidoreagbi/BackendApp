@@ -9,6 +9,11 @@ class Groupe extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'nom',
+        'description', // Ajoute d'autres attributs si nécessaire
+    ];
+
     public function membres() {
         return $this->hasMany(Membre::class);
     }

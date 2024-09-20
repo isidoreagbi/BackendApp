@@ -9,6 +9,13 @@ class Membre extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',     
+        'email',    
+        'groupe_id',
+        'user_id'
+    ];
+
     public function groupe() {
         return $this->belongsTo(Groupe::class);
     }
